@@ -1,0 +1,17 @@
+public class DuplicateElementInArray {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30, 40, 50, 40};
+        boolean hasDuplicate = false;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    hasDuplicate = true;
+                    break;
+                }
+            }
+        }
+
+        System.out.println(hasDuplicate ? "Duplicate element" : "No duplicate element");
+    }
+}
